@@ -1,0 +1,9 @@
+#/bin/bash
+
+echo "Setting up $1"
+
+git clone git@git.eit.uni-kl.de:ems/Members/synopsys.stm28fdsoi.git ~/28nm/sc/$1
+ln -s ~/28nm/sc/com.polar.vhdl/sc/design_setup/$1_design_setup.tcl ~/28nm/sc/$1/design_setup.tcl
+ln -s ~/28nm/sc/com.polar.vhdl/sc/constraints/$1_constraints.tcl ~/28nm/sc/$1/constraints.tcl
+#ln -s ~/28nm/sc/$1/constraints_template.tcl ~/28nm/sc/$1/constraints.tcl
+cd ~/28nm/sc/$1
